@@ -32,6 +32,32 @@
     }
   })
 
+  // for handlebars template
+  register({
+    name: "handlebars",
+
+    ext: [".handlebars"],
+
+    exec: function(uri, content) {
+      var code = [
+        'define("' + uri + '#", ["handlebars"], function(require, exports, module) {',
+        '  var source = "' + jsEscape(content) + '"',
+        '  var Handlebars = require("handlebars")',
+        '  module.exports = function(data, options) {',
+        '    var helpers = (options || {}).helpers || {}',
+        '    for (var key in helpers) {',
+        '      Handlebars.registerHelper(key, helpers[key])',
+        '    }',
+        '    return Handlebars.compile(source)(data)',
+        '  }',
+        '})'
+      ].join('\n')
+
+      globalEval(code)
+    }
+  })
+
+
   seajs.on("resolve", function(data) {
     var id = data.id
     if (!id) return ""
