@@ -94,7 +94,7 @@
     if (name) {
       xhr(data.requestUri, function(content) {
         plugins[name].exec(data.uri, content)
-        data.callback()
+        data.onRequest()
       })
 
       data.requested = true
