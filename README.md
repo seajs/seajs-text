@@ -29,5 +29,5 @@ define("main", function(require) {
 </script>
 ```
 
-For more details please visit <https://github.com/seajs/seajs-text/issues/1>
+For more details please visit [中文文档](https://github.com/seajs/seajs-text/issues/1)
 
