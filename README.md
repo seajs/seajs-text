@@ -18,15 +18,14 @@ Usage
 ```html
 <script src="path/to/sea.js"></script>
 <script src="path/to/seajs-text.js"></script>
-<script>
 
+<script>
 define("main", function(require) {
 
   // You can require `.tpl` file directly
   var tpl = require("./data.tpl")
 
 })
-
 </script>
 ```
 
