@@ -29,3 +29,6 @@ define("main", function(require) {
 
 </script>
 ```
+
+For more details please visit <https://github.com/seajs/seajs-text/issues/1>
+
