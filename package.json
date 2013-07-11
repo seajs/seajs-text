@@ -1,7 +1,7 @@
 {
   "family": "seajs",
   "name": "seajs-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Sea.js plugin for loading text resources such as template, json etc",
   "keywords": ["seajs", "plugin", "text"],
   "author": "Frank Wang <lifesinger@gmail.com>",
