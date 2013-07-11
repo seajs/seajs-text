@@ -70,18 +70,19 @@
       pluginName = m[1]
       id = m[2]
     }
-
-    var uri = seajs.resolve(id, data.refUri)
-    var t = uri.replace(/\.(?:js|css)(\?|$)/, "$1")
-
     // http://path/to/a.tpl
     // http://path/to/c.json?v2
-    if (!pluginName && (m = t.match(/[^?]+(\.\w+)(?:\?|$)/))) {
+    else if ((m = id.match(/[^?]+(\.\w+)(?:\?|#|$)/))) {
       pluginName = getPluginName(m[1])
     }
 
+    if (pluginName && id.indexOf("#") === -1) {
+      id += "#"
+    }
+
+    var uri = seajs.resolve(id, data.refUri)
+
     if (pluginName) {
-      uri = uri.replace(/\.js(?=$|\?)/, "")
       uriCache[uri] = pluginName
     }
 
