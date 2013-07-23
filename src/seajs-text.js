@@ -44,6 +44,11 @@
         '  var source = "' + jsEscape(content) + '"',
         '  var Handlebars = require("handlebars")',
         '  module.exports = function(data, options) {',
+        '    options || (options = {})',
+        '    options.helpers || (options.helpers = {})',
+        '    for (var key in Handlebars.helpers) {',
+        '      options.helpers[key] = options.helpers[key] || Handlebars.helpers[key]',
+        '    }',
         '    return Handlebars.compile(source)(data, options)',
         '  }',
         '})'
