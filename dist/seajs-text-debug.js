@@ -44,7 +44,7 @@
         '  var source = "' + jsEscape(content) + '"',
         '  var Handlebars = require("handlebars")',
         '  module.exports = function(data, options) {',
-        '    return Handlebars.compile(source)(data, options || {})',
+        '    return Handlebars.compile(source)(data, options)',
         '  }',
         '})'
       ].join('\n')
