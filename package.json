@@ -8,5 +8,14 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/seajs/seajs-text.git"
+  },
+  "devDependencies": {
+    "seatools": "*"
+  },
+  "spm": {
+    "alias": {
+      "fs": "fs"
+    },
+    "output": ["seajs-text.js"]
   }
 }

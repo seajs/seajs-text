@@ -1,13 +1,15 @@
 
 build:
-	@rm -rf dist
-	@mkdir dist
-	@sed "s/seajs-text/seajs-text-debug/" src/seajs-text.js >dist/seajs-text-debug.js
-	@uglifyjs src/seajs-text.js -o dist/seajs-text.js -mc
-	@make size
+	@seatools build
 
 test:
-	@make test -C ../seajs
+	@seatools site
+	@seatools test --local
+	@seatools test --http
+
+totoro:
+	@seatools site
+	@seatools test --totoro
 
 size:
-	@../seajs/tools/size.sh seajs-text
+	@seatools size

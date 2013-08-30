@@ -1,6 +1,6 @@
 
 seajs.config({
-  base: '../seajs-text/',
+  base: './',
   preload: ["../../dist/seajs-text"],
 
   // DO NOT affect plugin files
