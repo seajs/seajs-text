@@ -1,8 +1,9 @@
 /**
  * The Sea.js plugin for loading text resources such as template, json etc
  */
-(function(seajs, global) {
+define(function() {
 
+  var global = window
   var plugins = {}
   var uriCache = {}
 
@@ -162,20 +163,9 @@
         .replace(/[\u2029]/g, "\\u2029")
   }
 
-  // For node environment
-  if (typeof process === "object") {
-    xhr = function(filename, callback) {
-      callback(require("fs").readFileSync(pure(filename), "utf8"))
-    }
-  }
-
   function pure(uri) {
     // Remove timestamp etc
     return uri.replace(/\?.*$/, "")
   }
 
-
-  define("seajs-text", [], {})
-
-})(seajs, this);
-
+});
