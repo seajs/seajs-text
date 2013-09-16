@@ -109,4 +109,4 @@ define("seajs/seajs-text/1.0.2/seajs-text-debug", [], function() {
     }
 });
 
-seajs.use("seajs/seajs-text/1.0.2/seajs-text-debug");
+seajs.require("seajs/seajs-text/1.0.2/seajs-text-debug");
