@@ -1,7 +1,7 @@
 /**
  * The Sea.js plugin for loading text resources such as template, json etc
  */
-define("seajs/seajs-text/1.0.2/seajs-text-debug", [], function() {
+define("seajs/seajs-text/1.0.3/seajs-text-debug", [], function() {
     var global = window;
     var plugins = {};
     var uriCache = {};
@@ -109,4 +109,4 @@ define("seajs/seajs-text/1.0.2/seajs-text-debug", [], function() {
     }
 });
 
-seajs.require("seajs/seajs-text/1.0.2/seajs-text-debug");
+seajs.require("seajs/seajs-text/1.0.3/seajs-text-debug");
