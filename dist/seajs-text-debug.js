@@ -168,5 +168,5 @@ function pure(uri) {
   return uri.replace(/\?.*$/, "")
 }
 
-define("seajs/seajs-text/1.0.3/seajs-text-debug", [], {});
+define("seajs/seajs-text/1.0.2/seajs-text-debug", [], {});
 })();
