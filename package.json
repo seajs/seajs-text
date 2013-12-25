@@ -12,10 +12,9 @@
   "devDependencies": {
     "seatools": "*"
   },
-  "spm": {
-    "alias": {
-      "fs": "fs"
-    },
-    "output": ["seajs-text.js"]
+  "config": {
+    "plugin-concat": [
+      "seajs-text.js"
+    ]
   }
 }
