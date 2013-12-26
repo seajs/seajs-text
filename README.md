@@ -4,9 +4,6 @@ seajs-text
 A Sea.js plugin for loading text resources such as template, json etc
 
 
-> seajs-text@1.0.3+ is compatible with seajs@2.2.0+ !
-
-
 Install
 -------
 
