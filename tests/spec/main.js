@@ -1,7 +1,7 @@
 
 seajs.config({
   base: './',
-  preload: ["../../dist/seajs-text"],
+//  preload: ["../../dist/seajs-text"],
 
   // DO NOT affect plugin files
   // https://github.com/seajs/seajs-text/issues/2
@@ -9,6 +9,7 @@ seajs.config({
     [/(\/[a-z]\.\w+\.js)$/, '$1?zzz']
   ]
 })
-
-seajs.use('init')
+seajs.use("../../dist/seajs-text", function() {
+  seajs.use('init')
+})
 
