@@ -42,7 +42,7 @@ register({
     var code = [
       'define("' + uri + '#", ["handlebars"], function(require, exports, module) {',
       '  var source = "' + jsEscape(content) + '"',
-      '  var Handlebars = require("handlebars")',
+      '  var Handlebars = require("handlebars")["default"]',
       '  module.exports = function(data, options) {',
       '    options || (options = {})',
       '    options.helpers || (options.helpers = {})',
