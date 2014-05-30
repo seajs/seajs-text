@@ -10,4 +10,5 @@ define('handlebars', [], function(require, exports) {
     }
   }
 
+  exports.default = exports
 })
