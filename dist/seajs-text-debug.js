@@ -59,26 +59,6 @@ register({
   }
 })
 
-// for css
-register({
-  name: "css",
-
-  ext: [".css"],
-
-  exec: function(uri, content) {
-    var code = [
-      'define("' + uri + '#", ["importstyle"], function(require, exports, module) {',
-      '  var source = "' + jsEscape(content) + '"',
-      '  var importStyle = require("importstyle")',
-      '  module.exports = function() {',
-      '    importStyle(source, "' + uri + '#")',
-      '  }',
-      '})'
-    ].join('\n')
-
-    globalEval(code)
-  }
-})
 
 seajs.on("resolve", function(data) {
   var id = data.id
