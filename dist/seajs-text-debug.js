@@ -18,7 +18,7 @@ register({
   ext: [".tpl", ".html"],
 
   exec: function(uri, content) {
-    globalEval('define("' + uri + '#", [], "' + jsEscape(content) + '")')
+    globalEval('define("' + uri.split('?')[0] + '#", [], "' + jsEscape(content) + '")')
   }
 })
 
@@ -29,7 +29,7 @@ register({
   ext: [".json"],
 
   exec: function(uri, content) {
-    globalEval('define("' + uri + '#", [], ' + content + ')')
+    globalEval('define("' + uri.split('?')[0] + '#", [], ' + content + ')')
   }
 })
 
@@ -41,7 +41,7 @@ register({
 
   exec: function(uri, content) {
     var code = [
-      'define("' + uri + '#", ["handlebars"], function(require, exports, module) {',
+      'define("' + uri.split('?')[0] + '#", ["handlebars"], function(require, exports, module) {',
       '  var source = "' + jsEscape(content) + '"',
       '  var Handlebars = require("handlebars")["default"]',
       '  module.exports = function(data, options) {',
